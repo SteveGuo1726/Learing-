@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习视频资源中心</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .filter-btn {
+            padding: 12px 25px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .filter-btn.active {
+            background: #2c3e50;
+        }
+        
+        .video-section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 1.8rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .video-item {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .video-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .video-description {
+            color: #7f8c8d;
+            line-height: 1.7;
+        }
+        
+        .text-content {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+        
+        .text-content h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .text-content p {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .video-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>学习视频资源中心</h1>
+            <p class="description">精选B站优质学习视频，按主题分类整理，助您高效学习</p>
+        </header>
+        
+        <div class="filters">
+            <button class="filter-btn active">全部</button>
+            <button class="filter-btn">数学</button>
+            <button class="filter-btn">编程</button>
+            <button class="filter-btn">英语</button>
+            <button class="filter-btn">科学</button>
+        </div>
+        
+        <div class="video-section">
+            <h2 class="section-title">数学学习系列</h2>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114447926429894&bvid=BV1T6VFzAE1c&cid=29781591780&p=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">微积分的本质 - 导数的直观理解</h3>
+                    <p class="video-description">本视频通过直观的动画演示，讲解了导数的核心概念和几何意义，帮助学习者建立对微积分基本概念的深刻理解。</p>
+                </div>
+            </div>
+            
+            <div class="text-content">
+                <h2>学习微积分的重要性</h2>
+                <p>微积分是现代科学和工程的基石，它不仅是数学的一个重要分支，更是物理、经济学、计算机科学等众多领域的基础工具。掌握微积分能够帮助我们更好地理解变化率和累积量的概念，从而解决实际问题。</p>
+                <p>通过直观的方式学习微积分，可以避免陷入纯符号操作的困境，真正理解数学背后的直观意义。</p>
+            </div>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114447926429894&bvid=BV1T6VFzAE1c&cid=29781591780&p=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">线性代数的本质 - 矩阵与变换</h3>
+                    <p class="video-description">本视频通过可视化方式讲解线性代数的核心概念，包括向量、矩阵和线性变换的几何意义，让抽象概念变得直观易懂。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h2 class="section-title">编程学习系列</h2>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114447926429894&bvid=BV1T6VFzAE1c&cid=29781591780&p=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Python编程入门 - 从零开始学编程</h3>
+                    <p class="video-description">适合初学者的Python编程教程，从基础语法到简单应用，带你一步步进入编程世界。</p>
+                </div>
+            </div>
+            
+            <div class="text-content">
+                <h2>为什么学习编程？</h2>
+                <p>在数字化时代，编程已成为一项基本技能。它不仅能够帮助你解决实际问题，还能培养逻辑思维和解决问题的能力。</p>
+                <p>Python作为入门编程语言，语法简洁易懂，拥有丰富的库和框架，适合数据分析、人工智能、Web开发等多个领域。</p>
+            </div>
+            
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114447926429894&bvid=BV1T6VFzAE1c&cid=29781591780&p=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Web前端开发实战 - HTML+CSS+JavaScript</h3>
+                    <p class="video-description">通过实际项目学习前端开发三大核心技术，掌握现代网页开发的基本技能。</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 学习视频资源中心 | 精选优质教育内容</p>
+            <p>本页面仅用于学习目的，视频版权归原作者所有</p>
+        </footer>
+    </div>
+
+    <script>
+        // 简单的分类筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除之前活动的按钮
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // 设置当前按钮为活动状态
+                    this.classList.add('active');
+                    
+                    // 这里可以添加实际筛选视频的逻辑
+                    // 由于是静态示例，暂不实现完整功能
+                    alert('已选择分类: ' + this.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
